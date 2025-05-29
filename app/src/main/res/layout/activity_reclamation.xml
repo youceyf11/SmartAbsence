@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/gradient"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/btn_back_reclamation"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Retour"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Réclamations"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="Envoyez vos réclamations à l'administration"
+            android:textColor="#84FFFF"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/reclamation"
+            android:contentDescription="Reclamation icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Nouvelle réclamation -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nouvelle Réclamation"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Type de réclamation -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type de réclamation"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#34495E"
+                        android:layout_marginBottom="8dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_type_reclamation"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <!-- Priorité -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Priorité"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#34495E"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_priorite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_normale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Normale"
+                            android:checked="true"
+                            android:layout_marginEnd="16dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_urgente"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Urgente"
+                            android:layout_marginEnd="16dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_critique"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Critique"/>
+                    </RadioGroup>
+
+                    <!-- Titre -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Titre"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#34495E"
+                        android:layout_marginBottom="8dp"/>
+
+                    <EditText
+                        android:id="@+id/edit_titre_reclamation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Entrez un titre concis"
+                        android:background="@android:color/white"
+                        android:padding="12dp"
+                        android:layout_marginBottom="16dp"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+                    <!-- Description -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#34495E"
+                        android:layout_marginBottom="8dp"/>
+
+                    <EditText
+                        android:id="@+id/edit_description_reclamation"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:hint="Décrivez votre réclamation en détail..."
+                        android:background="@android:color/white"
+                        android:padding="12dp"
+                        android:gravity="top|start"
+                        android:layout_marginBottom="16dp"
+                        android:inputType="textMultiLine"/>
+
+                    <!-- Pièce jointe -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_piece_jointe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ajouter une pièce jointe"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <Button
+                            android:id="@+id/btn_ajouter_piece_jointe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Parcourir..."
+                            android:textSize="12sp"
+                            android:background="#3498DB"
+                            android:textColor="#FFFFFF"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_nom_fichier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aucun fichier sélectionné"
+                        android:textSize="12sp"
+                        android:textColor="#7F8C8D"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone"/>
+
+                    <!-- Bouton d'envoi -->
+                    <Button
+                        android:id="@+id/btn_envoyer_reclamation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Envoyer la réclamation"
+                        android:background="#3498DB"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:paddingVertical="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Historique des réclamations -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mes réclamations récentes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_marginBottom="12dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_reclamations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

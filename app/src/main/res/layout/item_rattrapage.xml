@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="8dp"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient"
+        android:padding="20dp">
+
+        <!-- Header stylisé -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txt_rattrapage_matiere"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Mathématiques"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#222"
+                android:letterSpacing="0.02"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txt_rattrapage_statut"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:minWidth="80dp"
+                android:gravity="center"
+                android:text="En attente"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/status_chip"
+                android:paddingHorizontal="16dp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Détails du cours avec icônes dans des cercles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:text="📅"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/txt_rattrapage_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="15 Juin 2024 - 14:00 à 16:00"
+                    android:textSize="15sp"
+                    android:textColor="#333"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:text="📍"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/txt_rattrapage_salle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Salle A101 - Centre Casablanca"
+                    android:textSize="15sp"
+                    android:textColor="#333"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/circle_icon_bg"
+                    android:text="👥"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/txt_rattrapage_groupe"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Groupe: 2ème année - Section A"
+                    android:textSize="15sp"
+                    android:textColor="#333"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Boutons d'action arrondis -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_rattrapage_details"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Détails"
+                android:background="@drawable/rounded_button_outline"
+                android:textColor="#3498DB"
+                android:textSize="13sp"
+                android:paddingHorizontal="24dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_rattrapage_action"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Confirmer"
+                android:background="@drawable/rounded_button_filled"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:paddingHorizontal="24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

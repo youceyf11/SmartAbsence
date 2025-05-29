@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0" android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"> <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emploi du Temps"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="?attr/colorPrimary" android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp"/>
+
+        <TableLayout
+            android:id="@+id/table_edt"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@android:color/white" android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:elevation="2dp"
+            android:stretchColumns="1"> <TableRow android:background="#E0E0E0"> <TextView
+            android:text="Lundi"
+            android:layout_span="2" android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#424242" android:padding="10dp"
+            android:gravity="center_vertical"/>
+        </TableRow>
+            <TableRow> <TextView android:text="S1\n08:30-10:00" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="virtualisation\nSC31-(C2)" android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#0277BD" android:background="#E1F5FE" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow> <TextView android:text="S2\n10:15-11:45" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="Administration Windows\nSC31-(C2)" android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#0277BD" android:background="#E1F5FE" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow> <TextView android:text="S3\n12:00-13:30" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="-" android:padding="8dp" android:textSize="14sp" android:gravity="center" android:background="#F9F9F9"/>
+            </TableRow>
+            <TableRow> <TextView android:text="S4\n13:45-15:15" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="" android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:background="#FFFFFF" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow> <TextView android:text="S5\n15:30-17:00" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="" android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#6A1B9A" android:background="#FFFFFF" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow> <TextView android:text="S6\n17:15-18:45" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="-" android:padding="8dp" android:textSize="14sp" android:gravity="center" android:background="#F9F9F9"/>
+            </TableRow>
+
+            <TableRow><View android:layout_span="2" android:layout_height="1dp" android:background="#D0D0D0" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/></TableRow>
+
+            <TableRow android:background="#E0E0E0">
+                <TextView android:text="Mardi" android:layout_span="2" android:textStyle="bold" android:textSize="18sp" android:textColor="#424242" android:padding="10dp" android:gravity="center_vertical"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="S1\n08:30-10:00" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="  virtualisation \nLI32(Roudani)   " android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#C62828" android:background="#FFEBEE" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="S2\n10:15-11:45" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="Administration Windows\nLI32(Roudani)" android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#C62828" android:background="#FFEBEE" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Pause Dejeuner" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="     " android:padding="8dp" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:background="#FFFFFF" android:maxLines="3" android:ellipsize="end"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="S4\n13:45-15:15" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="-" android:padding="8dp" android:textSize="14sp" android:gravity="center" android:background="#F9F9F9"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="S5\n15:30-17:00" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="-" android:padding="8dp" android:textSize="14sp" android:gravity="center" android:background="#F9F9F9"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="S6\n17:15-18:45" android:paddingTop="8dp" android:paddingBottom="8dp" android:paddingStart="8dp" android:paddingEnd="12dp" android:textSize="13sp" android:textColor="#616161" android:gravity="center_horizontal|top" android:minWidth="95dp"/>
+                <TextView android:text="-" android:padding="8dp" android:textSize="14sp" android:gravity="center" android:background="#F9F9F9"/>
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

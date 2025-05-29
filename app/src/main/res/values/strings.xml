@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EmsiSmartPresence</string>
+    <string name="Welcome">Welcome</string>
+    <string name="nom_prof">Mme/mr</string>
+    <string name="local">localisation</string>
+    <string name="absence">absence</string>
+    <string name="calendrier">calendrier</string>
+    <string name="text">test</string>
+    <string name="profil">profil</string>
+</resources>

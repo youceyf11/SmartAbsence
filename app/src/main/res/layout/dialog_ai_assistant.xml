@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/chat_area_background"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/dialog_geminianswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI: Hello! How can I assist you?"
+            android:textSize="16sp"
+            android:textColor="#374151"
+            android:lineSpacingExtra="4dp"/>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/dialog_prompt"
+        android:hint="Write your prompt here....."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/input_field_clean"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="#374151"
+        android:textColorHint="#9CA3AF"/>
+
+    <Button
+        android:id="@+id/dialog_btnSend"
+        android:layout_width="46dp"
+        android:layout_height="44dp"
+        android:layout_gravity="end"
+        android:background="@drawable/ic_send"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:text="Envoyer"
+        android:textColor="#FFFFFF"
+        android:textSize="100dp" />
+
+</LinearLayout>
